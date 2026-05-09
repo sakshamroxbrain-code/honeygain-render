@@ -8,9 +8,11 @@ RUN curl -L https://github.com/honeygain/honeygain-install/raw/master/honeygain.
 
 RUN chmod +x honeygain.sh
 
+ENV PORT=10000
+
 EXPOSE 10000
 
-CMD python3 -m http.server 10000 & \
+CMD python3 -m http.server $PORT & \
     ./honeygain.sh \
     -tou-accept \
     -email $HG_EMAIL \
