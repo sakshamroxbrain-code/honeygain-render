@@ -1,3 +1,3 @@
 FROM honeygain/honeygain:latest
 
-CMD sh -c 'honeygain -tou-accept -email "$HG_EMAIL" -pass "$HG_PASS" -device "render-node"'
+CMD ["-tou-accept", "-email", "sakshamrox.singh@gmail.com", "-pass", "Gopal@123", "-device", "render-node"]
